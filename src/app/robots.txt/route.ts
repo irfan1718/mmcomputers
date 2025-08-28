@@ -1,16 +1,16 @@
 import { NextResponse } from 'next/server';
 
 export async function GET() {
-  const content = `
-User-agent: *
+  return new NextResponse(
+    `User-agent: *
 Allow: /
 
 Sitemap: https://mmcomputers-ind.com/sitemap.xml
-  `.trim();
-
-  return new NextResponse(content, {
-    headers: {
-      'Content-Type': 'text/plain',
-    },
-  });
+`,
+    {
+      headers: {
+        'Content-Type': 'text/plain',
+      },
+    }
+  );
 }
