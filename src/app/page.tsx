@@ -29,6 +29,17 @@ export default function Home() {
         MM Computers and IT Solutions
       </h1>
 
+      {/* Tagline */}
+      <p className='text-lg md:text-xl mb-4 text-gray-600 max-w-2xl relative z-10'>
+        Computer Accessories · Hardware · Services
+      </p>
+
+      {/* Location */}
+      <p className='text-md text-gray-700 mb-10 font-medium relative z-10'>
+        📍 Near ICICI Bank, Opp Karnataka Bank, City Centre, Bank Road,
+        Kasaragod
+      </p>
+
       {/* Coming Soon Text */}
       <div className='bg-[#9ac336] text-white px-8 py-3 rounded-full text-lg font-semibold shadow-md animate-pulse relative z-10'>
         🚀 We’re Launching Soon!
