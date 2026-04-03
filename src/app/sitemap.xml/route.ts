@@ -1,9 +1,9 @@
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
 
 export async function GET() {
-  const baseUrl = 'https://mmcomputers-ind.com';
+  const baseUrl = "https://mmcomputers-ind.com";
 
-  const pages = [{ url: '/', lastModified: new Date() }];
+  const pages = [{ url: "/", lastModified: new Date() }];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -13,15 +13,16 @@ ${pages
   <loc>${baseUrl}${page.url}</loc>
   <lastmod>${page.lastModified.toISOString()}</lastmod>
   <changefreq>monthly</changefreq>
-  <priority>0.8</priority>
-</url>`
+  <priority>1.0</priority>
+</url>`,
   )
-  .join('')}
+  .join("")}
 </urlset>`;
 
   return new NextResponse(xml, {
     headers: {
-      'Content-Type': 'application/xml',
+      "Content-Type": "application/xml",
+      "Cache-Control": "public, max-age=86400, stale-while-revalidate=604800",
     },
   });
 }
