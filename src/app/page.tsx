@@ -85,7 +85,7 @@ export default function StoreLanding() {
         {/* Left: text */}
         <div className="flex-1 relative z-10">
           <span className="inline-block bg-[#9ac336]/15 text-[#5a7a1a] text-xs font-semibold px-3 py-1 rounded-full mb-5 tracking-wide uppercase">
-            📍 Kasaragod's Trusted Tech Shop
+            📍 Kasaragod&apos;s Trusted Tech Shop
           </span>
           <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-[#002c4f] mb-5">
             Your Neighbourhood
@@ -257,7 +257,7 @@ export default function StoreLanding() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
             {
-              text: "If you're looking for a reliable place in Kasaragod for computers, laptops, and accessories, MM Computers & IT Solutions is a top choice. What really stands out is their honesty — they guide you properly and won't make you spend unnecessarily on an old system. I've recommended them to many friends and even to my company. Everyone has been 100% satisfied.",
+              text: "If you are looking for a reliable place in Kasaragod for computers, laptops, and accessories, MM Computers & IT Solutions is a top choice. What really stands out is their honesty — they guide you properly and won't make you spend unnecessarily on an old system. I've recommended them to many friends and even to my company. Everyone has been 100% satisfied.",
               stars: 5,
             },
             {
@@ -285,7 +285,7 @@ export default function StoreLanding() {
                 ))}
               </div>
               <p className="text-gray-600 text-sm leading-relaxed flex-1">
-                "{review.text}"
+                &quot;{review.text}&quot;
               </p>
               <div className="flex items-center gap-3 pt-2 border-t border-[#e8e3d9]">
                 <div className="w-8 h-8 rounded-full bg-[#002c4f]/10 flex items-center justify-center text-[#002c4f] font-bold text-sm">
