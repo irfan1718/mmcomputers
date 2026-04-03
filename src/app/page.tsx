@@ -47,30 +47,36 @@ export default function StoreLanding() {
     <div className="min-h-screen bg-[#faf8f4] text-[#1a1a1a] font-sans">
       {/* ── NAV ─────────────────────────────────────────────── */}
       <nav className="sticky top-0 z-50 bg-[#faf8f4]/90 backdrop-blur border-b border-[#e8e3d9]">
-        <div className="max-w-6xl mx-auto px-5 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-3">
+        <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+          {/* Logo */}
+          <div className="flex items-center">
             <Image
               src="/logo.png"
               alt="MM Computers"
-              width={200}
-              height={200}
-              className="rounded-md"
+              width={120} // 👈 smaller for mobile
+              height={120}
+              className="rounded-md object-contain"
             />
           </div>
-          <div className="flex items-center gap-2 sm:gap-4">
+
+          {/* Actions */}
+          <div className="flex items-center gap-2">
+            {/* Call */}
             <a
-              href="tel:+919400000000"
-              className="text-sm text-[#002c4f] font-semibold px-4 py-2 rounded-full border border-[#002c4f] hover:bg-[#002c4f] hover:text-white transition-colors"
+              href="tel:+919895876355"
+              className="text-xs sm:text-sm text-[#002c4f] font-semibold px-3 py-2 rounded-full border border-[#002c4f] hover:bg-[#002c4f] hover:text-white transition-colors whitespace-nowrap"
             >
-              📞 Call Us
+              📞 <span className="hidden sm:inline">Call</span>
             </a>
+
+            {/* Directions */}
             <a
               href="https://maps.google.com/?q=MM+Computers+Kasaragod"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm bg-[#9ac336] text-white font-semibold px-4 py-2 rounded-full hover:bg-[#85ad2a] transition-colors"
+              className="text-xs sm:text-sm bg-[#9ac336] text-white font-semibold px-3 py-2 rounded-full hover:bg-[#85ad2a] transition-colors whitespace-nowrap"
             >
-              📍 Directions
+              📍 <span>Directions</span>
             </a>
           </div>
         </div>
